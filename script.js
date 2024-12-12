@@ -6,11 +6,9 @@ async function fetchData() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      const birdList = data.recordings;
-      console.log(birdList);
-
-      //console.log(data);
+      //console.log(birdList);
       // Handle your data
+      console.log(data);
       return data;
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -18,12 +16,20 @@ async function fetchData() {
     }
   }
 
-// async function birdData() {
-// const birdList = await fetchData();  
-// return birdList;  
+  //fetchData();
+
+//   async function birdData(fetchData){
+//     const birdList = await data.recordings;
+//   return birdList;
 // };
+async function birdData() {
+const birdList = await fetchData();  
+return birdList;  
+};
 
-
+console.log(fetchData);
 //fetchData();
 // console.log(birdList);
 // console.log(birdList[0]);
+
+
