@@ -22,12 +22,29 @@ async function fetchData() {
    
   };
 
-  fetchData();
-
-// async function birdData() {
-// const birdList = await fetchData();  
-// return birdList;  
-// };
+  let bird = fetchData();
 
 
 
+
+  
+
+
+function retrieveBirdSong() {
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    return jokes[randomIndex];
+  }
+  
+  function displayBirdSong(bird) {
+    const birdSongElement = document.getElementById("birdSong");
+    birdSongElement.textContent = bird.birdSong;
+  }
+  
+  // Waits for the DOM to be fully loaded and then displays an initial joke.
+  //document.addEventListener("DOMContentLoaded", getAndDisplayNewJoke);
+  
+  // Retrieves the "bird button" button
+  const birdButton = document.getElementById("newBirdSong");
+  
+  // Sets up a click event listener
+  birdButton.addEventListener("click", fetchData());
