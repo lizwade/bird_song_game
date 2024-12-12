@@ -1,13 +1,13 @@
 console.log("hello");
-let birdList = "Hello";
+let birdList = [];
+let birdSong = "";
+//let audioPlayer = document.getElementById("audioSource");
   // Waits for the DOM to be fully loaded and then displays an initial joke.
   //document.addEventListener("DOMContentLoaded", getAndDisplayNewJoke);
   
   // Retrieves the "bird button" button
   const birdButton = document.getElementById("newBirdSong");
   
-  // Sets up a click event listener
-  birdButton.addEventListener("click", fetchData());
 
 async function fetchData() {
     try {
@@ -18,37 +18,51 @@ async function fetchData() {
       const data = await response.json();
       //console.log(birdList);
       // Handle your data
-      console.log("checking data");
-      console.log(data);
      // return data;
-    birdList = data.recordings[5];
-    console.log("checking bird list");
-    console.log(birdList);
-    return birdList;
+    let rNd = Math.floor(Math.random()*40);
+    birdList.push([data.recordings[rNd].en,data.recordings[rNd]["file-name"]]);
+    //birdSong += birdList[1][1];
+    //birdList.push(data.recordings[Math.floor(Math.random()*40)].en); //we get 2?????
     } catch (error) {
       console.error('Error fetching data:', error);
       // Handle any errors
     }
-   
   };
 
   let bird = fetchData();
 
+//pull three bird objects
+console.log(data);
 
-
-
-  
+birdButton.addEventListener("click", (audioPlayer) => {
+  // Check if birdList has any data
+  if (birdList.length > 0) {
+      // Get the first bird's `en` (English name)
+      const firstBirdName = birdList[0][0];
+      const firstBirdSong = birdList[0][1];
+      let audioPlayer = document.getElementById("audioSource");
+      audioPlayer.src = firstBirdSong;
+      console.log(audioPlayer);
+      const attachedName = document.getElementById("birdSong");
+      attachedName.textContent = firstBirdName;
+      //console.log("First bird's name:", firstBirdName, firstBirdSong);
+  } else {
+      console.log("Bird list is empty. Wait for the data to load!");
+  }
+});
+ 
 
 
 function retrieveBirdSong() {
-    const randomIndex = Math.floor(Math.random() * jokes.length);
+    const randomIndex = Math.floor(Math.random() * data.length);
     return jokes[randomIndex];
-  }
+  };
   
+
   function displayBirdSong(bird) {
     const birdSongElement = document.getElementById("birdSong");
     birdSongElement.textContent = bird.birdSong;
-  }
+  };
   
 
   
