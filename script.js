@@ -1,4 +1,14 @@
 console.log("hello");
+
+  // Waits for the DOM to be fully loaded and then displays an initial joke.
+  //document.addEventListener("DOMContentLoaded", getAndDisplayNewJoke);
+  
+  // Retrieves the "bird button" button
+  const birdButton = document.getElementById("newBirdSong");
+  
+  // Sets up a click event listener
+  birdButton.addEventListener("click", fetchData());
+
 async function fetchData() {
     try {
       const response = await fetch(`https://xeno-canto.org/api/2/recordings?query=q:">C"+cnt:"uk"+grp:"birds"+type:"song"+len:"<10"`);
@@ -39,12 +49,22 @@ function retrieveBirdSong() {
     const birdSongElement = document.getElementById("birdSong");
     birdSongElement.textContent = bird.birdSong;
   }
+
+
   
-  // Waits for the DOM to be fully loaded and then displays an initial joke.
-  //document.addEventListener("DOMContentLoaded", getAndDisplayNewJoke);
-  
-  // Retrieves the "bird button" button
-  const birdButton = document.getElementById("newBirdSong");
-  
-  // Sets up a click event listener
-  birdButton.addEventListener("click", fetchData());
+// Hear the sound
+//audio player triggers on load plays once. or click button to hear sound/play game.
+
+//  guess bird / bird name
+//get 3 randomised bird names with
+
+//Get correct/incorrect
+
+
+
+
+// when clicked
+
+  // if the value is true then display correct
+  // else display unlucky
+
