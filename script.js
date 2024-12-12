@@ -1,5 +1,5 @@
 console.log("hello");
-
+let birdList = "Hello";
   // Waits for the DOM to be fully loaded and then displays an initial joke.
   //document.addEventListener("DOMContentLoaded", getAndDisplayNewJoke);
   
@@ -21,7 +21,7 @@ async function fetchData() {
       console.log("checking data");
       console.log(data);
      // return data;
-    const birdList = await data.recordings[5];
+    birdList = data.recordings[5];
     console.log("checking bird list");
     console.log(birdList);
     return birdList;
@@ -49,7 +49,7 @@ function retrieveBirdSong() {
     const birdSongElement = document.getElementById("birdSong");
     birdSongElement.textContent = bird.birdSong;
   }
-
+  
 
   
 // Hear the sound
