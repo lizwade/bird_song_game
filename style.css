@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #1f3e36;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #aee0df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .title {
+      background-color: #50a050;
+      border-radius: 1vw;
+      max-width: 45vw;
+      min-width: none;
+      max-height: 30vh;
+      min-height: none;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      }
+  
+  button {
+    color: #1f3e36;
+    background-color: #f0fff0;
+    border: 5px double #1f3e36;
+    border-radius: 25px;
+    padding: 1vw;
+    }
+  
+  #newBirdSong {
+        min-width: 12vw;
+  }
+  
+  button:hover {
+      box-shadow: 0 0 1px 1px #f6fcf6;
+      background-color: #f6fcf6;
+  }
+  
+  .birdBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  #birdMP3 {
+    background: #1f3e36;
+    border: 5px solid #1f3e36;
+    border-radius: 1vh;
+    margin-top: 5vh;
+  }
+  
+  .nameBtnBox {
+      display: flex;
+      justify-content: space-around;
+      column-gap: 1vw;
+  }
+  
+  .btnBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 6vh;
+      margin-top: 3vh;
+  }
+  
+  #iframeBox {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  
+  h1 {
+      margin: 0;
+      min-width: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #f6fcf6;
+      padding: 1vw 2vw;
+      border-radius: 1vw;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+  }
+  
+  #greenBird {
+      position:relative;
+      min-width: none;
+      min-height: none;
+      margin: auto;
+      grid-row: 2 / 4;
+      grid-column: 2 / 4;
+  }
+  
+  #greyBird {
+      position: relative;
+      min-width: none;
+      min-height: none;
+      margin: auto;
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+  }
+  

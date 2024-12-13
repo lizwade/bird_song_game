@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="Images/faviBird.svg" />
     <title>Document</title>
 </head>
 <body>
-    <article class="birdBox">
+    <!-- <article class="birdBox">
         <audio controls id="birdMP3">
             <source id="audioSource" src="XC375211-86 (mp3cut.ru).mp3" type="audio/mpeg">
           </audio>
@@ -15,7 +17,53 @@
       <button type="button" id="newBirdSong">New Song Here</button>
       <button type ="button" class="birdName">Name1</button>
       <button type ="button" class="birdName">Name2</button>
-      <button type ="button" class="birdName">Name3</button>
+      <button type ="button" class="birdName">Name3</button> -->
+
+      <section id="content">
+        <header class="title">
+          <h1>Song Birds</h1>
+          <img
+          src="images\greyBird.svg.png"
+          alt="Sweet, grey and yellow cartoon songbird"
+          id="greyBird"
+          width="50px"
+        />
+          <img
+            src="images\greenBird.svg.png"
+            alt="Sweet, green, cartoon songbird"
+            id="greenBird"
+            width="60px"
+          />
+        </header>
+        <section class="birdBox">
+          <div id="iframeBox">
+            <iframe
+              id="iframe"
+              src=""
+              scrolling="no"
+              frameborder="0"
+              width="340"
+              height="220"
+            ></iframe>
+          </div>
+          <div id="audio">
+            <!-- <audio controls id="birdMP3">
+              <source id="audioSource" src="" type="audio/mpeg" />
+            </audio> -->
+            <p id="birdSong">Loading...</p>
+          </div>
+          <article class="btnBox">
+            <button type="button" id="newBirdSong">New Song</button>
+            <article class="nameBtnBox">
+              <button type="button" class="birdName a">Name1</button>
+              <button type="button" class="birdName b">Name2</button>
+              <button type="button" class="birdName c">Name3</button>
+            </article>
+          </article>
+        </section>
+      </section>
     <script src = "script.js"></script>
 </body>
 </html>
+
+<!--  src=""https://xeno-canto.org/773176/embed -->
